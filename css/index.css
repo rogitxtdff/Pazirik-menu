@@ -1,0 +1,11 @@
+@import url(./reset.css);
+@import url(./font.css);
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.5rem;
+  font-family: "pazirik_Regular";
+  
+}
