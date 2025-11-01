@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import "../variables.css";
+@import "../font.css";
+
+body{
+  @apply bg-[var(--primary-back-color)]
+}
+
+.top-section {
+  @apply w-full fixed top-0 z-20;
+}
+.header {
+  @apply w-full h-[55px] flex justify-between items-center bg-[var(--secend-back-color)];
+}
+.header__back-icon {
+  @apply ml-8;
+}
+.header__back-icon i {
+  @apply text-[1.6rem] text-white;
+}
+.header__logo {
+  @apply mr-8 flex justify-center items-center gap-3;
+}
+.header__logo h1 {
+  font-family: var(--secend-font);
+  @apply text-[1.6rem] text-white;
+}
+.header__logo img {
+  @apply w-[40px] h-[40px] rounded-[50px];
+}
+
+.categorys {
+  @apply overflow-y-auto h-[65px]  bg-[var(--secend-back-color)] flex  justify-start gap-5 px-5 items-center  rounded-b-[10px] -mt-0.5;
+}
+.categorys__item {
+  font-family: var(--secend-font);
+  @apply text-[1.35rem] text-white text-shadow-2xs duration-300  border-[1px] border-white px-4 h-[35px] flex justify-center items-center pt-2 rounded-[30px] text-nowrap;
+}
+.categorys__item.select {
+  @apply  bg-[rgb(var(--primary-color))] border-[rgb(var(--primary-color))];
+}
+
+.main{
+  @apply w-full h-[400px]   mt-[120px] flex flex-col justify-start items-center gap-8 py-8
+}
+.cat__continer{
+  @apply w-[90%] bg-[var(--secend-back-color)] flex flex-col justify-center items-center gap-5 py-8
+}
+.cat__title{
+  @apply w-[90%]  flex justify-center items-center relative
+}
+.cat__title p{
+  font-family: var(--secend-font);
+  @apply text-[1.8rem] text-[rgb(var(--primary-color))] bg-[var(--secend-back-color)] px-3 z-10
+}
+.cat__title::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+.cat__list-items{
+  @apply w-[90%] flex flex-col justify-start items-center gap-10 py-10
+}
+.cat__item{
+  @apply w-[90%]  flex flex-col justify-center gap-4
+}
+.cat__item--name-price{
+  font-family: var(--secend-font);
+  @apply flex justify-between items-center text-white text-[1.2rem] relative
+}
+.cat__item--name-price::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: .5px;
+  background-color: #fff;
+}
+.cat__item--price{
+  @apply px-4 bg-[var(--secend-back-color)] z-10 -ml-0.5
+}
+.cat__item--name{
+  @apply px-4 bg-[var(--secend-back-color)] z-10 -mr-0.5
+}
+.cat__item--about{
+  font-family: var(--primary-font);
+  @apply flex justify-end items-center pr-4 text-gray-400
+}
