@@ -7,7 +7,7 @@ body{
 }
 
 .top-section {
-  @apply w-full fixed top-0 z-20;
+  @apply w-full fixed top-0 z-20 shadow-2xl;
 }
 .header {
   @apply w-full h-[55px] flex justify-between items-center bg-[var(--secend-back-color)];
@@ -34,24 +34,27 @@ body{
 }
 .categorys__item {
   font-family: var(--secend-font);
-  @apply text-[1.35rem] text-white text-shadow-2xs duration-300  border-[1px] border-white px-4 h-[35px] flex justify-center items-center pt-2 rounded-[30px] text-nowrap;
+  @apply text-[1.3rem] text-white  duration-300  border-[1px] border-white px-5 h-[37px] flex justify-center items-center pt-2 rounded-[30px] text-nowrap cursor-pointer;
+}
+.categorys__item:hover {
+  @apply  scale-[104%] text-shadow-gray-200 text-shadow-2xs shadow-white shadow-xs
 }
 .categorys__item.select {
-  @apply  bg-[rgb(var(--primary-color))] border-[rgb(var(--primary-color))];
+  @apply  bg-[rgb(var(--primary-color))] border-[rgb(var(--primary-color))] scale-110;
 }
 
 .main{
-  @apply w-full h-[400px]   mt-[120px] flex flex-col justify-start items-center gap-8 py-8
+  @apply w-full   mt-[120px] flex flex-col justify-start items-center gap-8 py-8
 }
 .cat__continer{
-  @apply w-[90%] bg-[var(--secend-back-color)] flex flex-col justify-center items-center gap-5 py-8
+  @apply w-[90%]  sm:max-w-[800px] bg-[var(--secend-back-color)] flex flex-col justify-center items-center gap-5 py-8 cursor-default shadow-2xl
 }
 .cat__title{
-  @apply w-[90%]  flex justify-center items-center relative
+  @apply w-[90%]  flex justify-center items-center relative mt-[10px]
 }
 .cat__title p{
   font-family: var(--secend-font);
-  @apply text-[1.8rem] text-[rgb(var(--primary-color))] bg-[var(--secend-back-color)] px-3 z-10
+  @apply text-[1.8rem] text-[rgb(var(--primary-color))] bg-[var(--secend-back-color)] px-3 z-10 text-shadow-rose-950 text-shadow-lg
 }
 .cat__title::before{
   content: '';
@@ -61,7 +64,7 @@ body{
   background-color: #fff;
 }
 .cat__list-items{
-  @apply w-[90%] flex flex-col justify-start items-center gap-10 py-10
+  @apply w-[90%] flex flex-col justify-start items-center gap-10 py-10 mt-[10px]
 }
 .cat__item{
   @apply w-[90%]  flex flex-col justify-center gap-4
@@ -85,5 +88,5 @@ body{
 }
 .cat__item--about{
   font-family: var(--primary-font);
-  @apply flex justify-end items-center pr-4 text-gray-400
+  @apply flex justify-end items-center pr-4 text-gray-400 text-[1rem]
 }

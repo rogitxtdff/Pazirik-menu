@@ -4,4 +4,45 @@ html {
   font-size: 62.5%; /* موبایل */
   box-sizing: border-box;
   font-family: "pazirik_Rgular";
+  scroll-behavior: smooth;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 75%; /* تبلت */
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 67.5%; /* لپ‌تاپ */
+  }
+  .continer {
+    background-position: 0px -500px;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 80%; /* مانیتور بزرگ */
+  }
+}
+body {
+  font-size: 1.5rem;
+  font-family: "pazirik_Regular";
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #6d6d6d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
