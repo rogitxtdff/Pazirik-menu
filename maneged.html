@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>کافه رستوران پازیریک</title>
+    <script src="./js/maneged.js"></script>
     <link rel="stylesheet" href="./css/maneged.css" />
     <link rel="icon" href="./image/logo/logo.webp" />
     <link href="./css/maneged/output.css" rel="stylesheet" />
@@ -12,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   /////////////////// افزودن ایتم جدید
   <!-- <div class="modal-main__title">افزودن ایتم جدید</div>
@@ -63,7 +65,7 @@
 
   ///////////////////////////// پیام حذف ایتم
 
-         <!-- <div dir="rtl" class="modal-main__warning-massage">
+  <!-- <div dir="rtl" class="modal-main__warning-massage">
            <div class="warning-icon">
              <i class="fas fa-warning"></i>
            </div>
@@ -95,7 +97,7 @@
     <div class="header">
       <div class="welcome-admin">
         <p>خوش آمدید</p>
-        <h1>محمد حسین</h1>
+        <h1 class="welcome-user-name"></h1>
       </div>
       <h1>پنل ادمین پازیریک</h1>
     </div>
@@ -104,7 +106,7 @@
         <div class="creat-item__btn">افزودن ایتم جدید</div>
         <div class="sort__section">
           <h1>: دسته بندی ها</h1>
-          <select dir="rtl" class="sort__select" name="category">
+          <select dir="rtl" id="sort-select" class="sort__select" name="category">
             <option value="main">غذاهای اصلی</option>
             <option value="dessert">دسر</option>
             <option value="drink">نوشیدنی</option>

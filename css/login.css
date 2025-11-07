@@ -5,3 +5,21 @@ html {
   box-sizing: border-box;
   font-family: "pazirik_Rgular";
 }
+
+.swal2-toast{
+  direction: rtl;
+  width: 450px !important;
+  font-size: 1.4rem !important;
+  margin: 15px !important;
+}
+.swal2-confirm{
+  background-color: rgb(22, 121, 9);
+  font-family: "pazirik_Regular";
+  font-weight: bold;
+  padding: 10px 15px !important;
+  font-size: 1.2rem;
+}
+.swal2-confirm:hover{
+  background-color: rgba(22, 121, 9, 0.397);
+  
+}
