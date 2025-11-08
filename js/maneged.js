@@ -368,7 +368,14 @@ const getItems = async () => {
 
     const response = await fetch(`${url}/items.json`);
     const resultDB = await response.json();
+    if (!resultDB) {
+      items = [];
+      renderItemsSection(items, "all");
+      loaderContiner.classList.add("hidden");
+      return;
+    }
 
+    // تبدیل داده‌ها به آرایه آیتم‌ها
     items = Object.entries(resultDB).map(([id, value]) => ({
       ...value,
       id,
@@ -386,7 +393,15 @@ const getCategoryItem = async () => {
   try {
     const response = await fetch(`${url}/category.json`);
     const resultDB = await response.json();
+// اگر دیتابیس دسته‌بندی‌ها خالی بود
+    if (!resultDB) {
+      category = [];
+      renderSortOptions(); // همچنان گزینه "همه" رو نشون بده
+      creatItemBtn.addEventListener("click", openModalAddItem);
+      return;
+    }
 
+    // تبدیل داده‌ها به آرایه دسته‌بندی‌ها
     category = Object.entries(resultDB).map(([id, value]) => ({
       ...value,
       id,
@@ -395,6 +410,7 @@ const getCategoryItem = async () => {
     getItems();
     renderSortOptions();
     creatItemBtn.addEventListener("click", openModalAddItem);
+
   } catch (error) {
     callToast(false, "ناموفق در لود صفحه لطفا رفرش کنید .");
   }
