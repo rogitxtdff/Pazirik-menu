@@ -7,10 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
-    --color-red-900: oklch(39.6% 0.141 25.723);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-blue-500: oklch(62.3% 0.214 259.815);
@@ -214,6 +212,7 @@ body {
 .header {
   position: fixed;
   top: calc(var(--spacing) * 0);
+  z-index: 30;
   display: flex;
   height: 60px;
   width: 100%;
@@ -252,11 +251,14 @@ body {
   color: rgba(var(--primary-color),.9);
 }
 .main {
-  margin-top: 60px;
+  margin-top: 20px;
   display: flex;
   width: 100%;
   justify-content: center;
   overflow: auto;
+  @media (width >= 48rem) {
+    margin-top: 60px;
+  }
 }
 .continer {
   margin-block: 20px;
@@ -333,10 +335,9 @@ select {
 .items-continer {
   width: 100%;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  align-items: center;
-  gap: 20px;
 }
 .item-cart {
+  margin-top: calc(var(--spacing) * 10);
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -452,9 +453,9 @@ select {
 .back-blur.active {
   position: absolute;
   top: calc(var(--spacing) * 0);
-  z-index: 50;
+  z-index: 40;
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -601,6 +602,20 @@ select {
     background-color: #fdf9001e;
     color: var(--color-yellow-500);
   }
+}
+.loader-continer {
+  position: absolute;
+  top: calc(var(--spacing) * 0);
+  z-index: 50;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+}
+.loader-continer.hidden {
+  display: none;
 }
 @property --tw-font-weight {
   syntax: "*";

@@ -26,3 +26,97 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+.swal2-actions{
+  direction: ltr;
+}
+.swal2-confirm{
+  background-color: rgb(22, 121, 9);
+  font-family: "pazirik_Regular";
+  font-weight: bold;
+  padding: 10px 15px !important;
+  font-size: 1.2rem;
+}
+.swal2-confirm:hover{
+  background-color: rgba(22, 121, 9, 0.397);
+  
+}
+.swal2-cancel{
+  color: rgb(236, 33, 33);
+  background-color: rgba(236, 33, 33, 0.226);
+  font-family: "pazirik_Regular";
+  font-weight: bold;
+  padding: 10px 15px !important;
+  font-size: 1.2rem;
+}
+.swal2-cancel:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(236, 33, 33);
+  
+}
+.swal2-icon-content{
+  margin-top: 14px;
+}
+.loader {
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  background: currentColor;
+  color: rgb(249, 71, 71);
+  box-sizing: border-box;
+  animation: animloader 0.3s 0.3s linear infinite alternate;
+}
+
+.loader::after, .loader::before {
+  content: '';
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  background: currentColor;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  box-sizing: border-box;
+  animation: animloader 0.3s  0.45s  linear infinite alternate;
+}
+.loader::before {
+  left: -20px;
+  animation-delay: 0s;
+}
+
+@keyframes animloader {
+  0%   { height: 48px} 
+  100% { height: 4px}
+}
+
+.loader-Modal {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loader-Modal::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid #FFF;
+      animation: prixClipFix 2s linear infinite ;
+    }
+
+    @keyframes rotate {
+      100%   {transform: rotate(360deg)}
+    }
+
+    @keyframes prixClipFix {
+        0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+        25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+        50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+        75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+        100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    }

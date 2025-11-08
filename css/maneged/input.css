@@ -7,7 +7,7 @@ body {
   @apply bg-[var(--primary-back-color)];
 }
 .header {
-  @apply w-full h-[60px] flex justify-between items-center bg-[var(--secend-back-color)] px-[20px] fixed top-0;
+  @apply w-full h-[60px] flex justify-between items-center bg-[var(--secend-back-color)] px-[20px] fixed top-0 z-[30];
 }
 .header h1 {
   font-family: var(--secend-font);
@@ -22,7 +22,7 @@ body {
   @apply text-[rgba(var(--primary-color),.9)] text-[1.4rem] font-extrabold;
 }
 .main {
-  @apply w-full overflow-auto mt-[60px] flex justify-center;
+  @apply w-full overflow-auto mt-[20px] md:mt-[60px] flex justify-center;
 }
 .continer {
   @apply w-[80%] my-[20px] flex flex-col items-center gap-[20px];
@@ -57,10 +57,10 @@ select {
   @apply w-[20%];
 }
 .items-continer {
-  @apply w-full grid-cols-1 items-center gap-[20px];
+  @apply w-full grid-cols-1  ;
 }
 .item-cart {
-  @apply w-full rounded-xl bg-[var(--secend-back-color)] flex flex-col items-center gap-10 py-10;
+  @apply w-full rounded-xl bg-[var(--secend-back-color)] flex flex-col mt-10 items-center gap-10 py-10;
 }
 .item-cart__name-price {
   font-family: var(--secend-font);
@@ -115,7 +115,7 @@ select {
 }
 
 .back-blur.active {
-  @apply w-[100%] h-[100vh] bg-[#00000050] backdrop-blur-xs absolute top-0 z-50 flex justify-center items-center;
+  @apply w-[100%] h-full bg-[#00000050] backdrop-blur-xs absolute top-0 z-40 flex justify-center items-center;
   .Modal {
     @apply bg-[var(--secend-back-color)] w-[350px] rounded-xl flex flex-col justify-between items-center gap-[10px] py-[5px];
   }
@@ -163,4 +163,12 @@ select {
   .warning-icon {
     @apply w-[30px] h-[30px] flex justify-center items-center rounded-xl text-yellow-500 bg-[#fdf9001e];
   }
+}
+
+
+.loader-continer{
+  @apply w-full h-[100vh] absolute top-0 bg-[#444] z-50 flex justify-center items-center 
+}
+.loader-continer.hidden{
+  @apply hidden
 }

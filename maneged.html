@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- npx @tailwindcss/cli -i ./css/maneged/input.css -o ./css/maneged/output.css --watch     -->
+    npx @tailwindcss/cli -i ./css/maneged/input.css -o ./css/maneged/output.css --watch    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>کافه رستوران پازیریک</title>
-    <script src="./js/maneged.js"></script>
+    <script src="./js/maneged.js" defer></script>
     <link rel="stylesheet" href="./css/maneged.css" />
     <link rel="icon" href="./image/logo/logo.webp" />
     <link href="./css/maneged/output.css" rel="stylesheet" />
@@ -31,7 +31,7 @@
         </div>
          -->
 
-  ///////////////// عوض کردن مقدار ایتم ها
+  <!-- ///////////////// عوض کردن مقدار ایتم ها -->
 
   <!-- <div class="modal-main__title">تغیر جدید ایتم </div>
           <input
@@ -63,7 +63,7 @@
         </div>
          -->
 
-  ///////////////////////////// پیام حذف ایتم
+  <!-- ///////////////////////////// پیام حذف ایتم -->
 
   <!-- <div dir="rtl" class="modal-main__warning-massage">
            <div class="warning-icon">
@@ -72,11 +72,14 @@
            <p>ایا از حذف این ایتم اطمینان دارید ؟</p>
          </div> -->
 
-  <body>
+  <body >
+    <div class="loader-continer">
+      <span class="loader"></span>
+    </div>
     <div class="back-blur hidden">
       <div class="Modal">
         <div class="modal-header">
-          <div class="modal-header__close-btn">
+          <div  class="modal-header__close-btn">
             <i class="fas fa-close"></i>
           </div>
         </div>
@@ -103,7 +106,7 @@
     </div>
     <div class="main">
       <div class="continer">
-        <div class="creat-item__btn">افزودن ایتم جدید</div>
+        <div id="creat-item-btn" class="creat-item__btn">افزودن ایتم جدید</div>
         <div class="sort__section">
           <h1>: دسته بندی ها</h1>
           <select dir="rtl" id="sort-select" class="sort__select" name="category">
@@ -112,7 +115,7 @@
             <option value="drink">نوشیدنی</option>
           </select>
         </div>
-        <div class="items-continer">
+        <div  class="items-continer">
           <div class="item-cart">
             <div class="item-cart__name-price">
               <div class="item-cart__price">
