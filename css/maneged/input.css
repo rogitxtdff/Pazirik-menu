@@ -22,10 +22,10 @@ body {
   @apply text-[rgba(var(--primary-color),.9)] text-[1.4rem] font-extrabold;
 }
 .main {
-  @apply w-full overflow-auto mt-[20px] md:mt-[60px] flex justify-center;
+  @apply w-full overflow-auto mt-[60px]   flex justify-center;
 }
 .continer {
-  @apply w-[80%] my-[20px] flex flex-col items-center gap-[20px];
+  @apply w-[80%] my-[20px] max-w-[900px] flex flex-col items-center gap-[20px];
 }
 .creat-item__btn {
   font-family: var(--secend-font);
@@ -35,8 +35,11 @@ body {
   font-family: var(--secend-font);
   @apply bg-[rgba(var(--primary-color),.7)];
 }
+.sort-continer-item {
+  @apply w-[100%] grid grid-cols-1 gap-10 lg:grid-cols-2;
+}
 .sort__section {
-  @apply w-[100%] flex flex-col justify-center items-end gap-10 py-10 px-[15px] bg-[var(--secend-back-color)] rounded-xl;
+  @apply w-[100%] flex flex-col justify-center items-end gap-10 py-10 px-[15px] bg-[var(--secend-back-color)] rounded-xl max-h-[140px];
 }
 .sort__section h1 {
   font-family: var(--secend-font);
@@ -57,7 +60,7 @@ select {
   @apply w-[20%];
 }
 .items-continer {
-  @apply w-full grid-cols-1  ;
+  @apply w-full grid-cols-1 -mt-10;
 }
 .item-cart {
   @apply w-full rounded-xl bg-[var(--secend-back-color)] flex flex-col mt-10 items-center gap-10 py-10;
@@ -165,10 +168,9 @@ select {
   }
 }
 
-
-.loader-continer{
-  @apply w-full h-[100vh] absolute top-0 bg-[#444] z-50 flex justify-center items-center 
+.loader-continer {
+  @apply w-full h-[100vh] absolute top-0 bg-[#444] z-50 flex justify-center items-center;
 }
-.loader-continer.hidden{
-  @apply hidden
+.loader-continer.hidden {
+  @apply hidden;
 }

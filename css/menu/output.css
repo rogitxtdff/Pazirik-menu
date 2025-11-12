@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.16 | MIT License | https://tailwindcss.com */
+
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -7,19 +7,27 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-red-900: oklch(39.6% 0.141 25.723);
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-yellow-500: oklch(79.5% 0.184 86.047);
+    --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-rose-950: oklch(27.1% 0.105 12.094);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-light: 300;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
+    --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
+    --blur-xs: 4px;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -172,7 +180,11 @@
     display: none !important;
   }
 }
-@layer utilities;
+@layer utilities {
+  .hidden {
+    display: none;
+  }
+}
 @import url(./font.css);
 :root {
   --primary-color: 249, 71, 71;
@@ -291,6 +303,7 @@ body {
   background-color: rgb(var(--primary-color));
 }
 .main {
+  position: relative;
   margin-top: 120px;
   display: flex;
   width: 100%;
@@ -298,7 +311,9 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: calc(var(--spacing) * 8);
+  overflow-y: auto;
   padding-block: calc(var(--spacing) * 8);
+  height: calc(100vh - 120px);
 }
 .cat__continer {
   display: flex;
@@ -397,6 +412,20 @@ body {
   padding-right: calc(var(--spacing) * 4);
   font-size: 1rem;
   color: var(--color-gray-400);
+}
+.loader-continer {
+  position: absolute;
+  top: calc(var(--spacing) * 0);
+  z-index: 50;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+}
+.loader-continer.hidden {
+  display: none;
 }
 @property --tw-shadow {
   syntax: "*";

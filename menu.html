@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>کافه رستوران پازیریک</title>
+    <script src="./js/menu.js" defer></script>
     <link rel="stylesheet" href="./css/menu.css" />
     <link rel="icon" href="./image/logo/logo.webp" />
     <link href="./css/menu/output.css" rel="stylesheet" />
@@ -13,9 +14,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
   </head>
   <body>
+    <div class="loader-continer">
+      <span class="loader"></span>
+    </div>
     <div class="top-section">
       <div class="header">
         <a href="./index.html" class="header__back-icon"
@@ -28,23 +31,15 @@
       </div>
       <div dir="rtl" class="categorys">
         <div class="categorys__item select">پیتزا</div>
-        <div class="categorys__item">غذا 4 زیاد مثال</div>
-        <div class="categorys__item">غذا 4 زیاد مثال</div>
-        <div class="categorys__item">غذا 4 زیاد مثال</div>
-        <div class="categorys__item">غذا 4 زیاد مثال</div>
-        <div class="categorys__item">غذا 4 زیاد مثال</div>
-        <div class="categorys__item">غذا 4 زیاد مثال</div>
-        <div class="categorys__item">غذا 4 زیاد مثال</div>
-        <div class="categorys__item">غذا 4 زیاد مثال</div>
-        <div class="categorys__item">غذا 3</div>
+        <a href="" class="categorys__item">غذا 4 زیاد مثال</a>
+        <a href="" class="categorys__item">غذا 4 زیاد مثال</a>
+        <a href="" class="categorys__item">غذا 4 زیاد مثال</a>
       </div>
     </div>
     <div class="main">
-      
       <div class="cat__continer">
         <div class="cat__title"><p>قهوه</p></div>
         <div class="cat__list-items">
-
           <div class="cat__item">
             <div class="cat__item--name-price">
               <div class="cat__item--price">13.000</div>
@@ -52,33 +47,8 @@
             </div>
             <div class="cat__item--about">اسپرسو دبل,شیر,سیروپ کارامل</div>
           </div>
-
         </div>
       </div>
     </div>
-    <script>
-      let timerInterval;
-      Swal.fire({
-        title: "Auto close alert!",
-        html: "I will close in <b></b> milliseconds.",
-        timer: 2000,
-        timerProgressBar: true,
-        didOpen: () => {
-          Swal.showLoading();
-          const timer = Swal.getPopup().querySelector("b");
-          timerInterval = setInterval(() => {
-            timer.textContent = `${Swal.getTimerLeft()}`;
-          }, 100);
-        },
-        willClose: () => {
-          clearInterval(timerInterval);
-        },
-      }).then((result) => {
-        /* Read more about handling dismissals below */
-        if (result.dismiss === Swal.DismissReason.timer) {
-          console.log("I was closed by the timer");
-        }
-      });
-    </script>
   </body>
 </html>

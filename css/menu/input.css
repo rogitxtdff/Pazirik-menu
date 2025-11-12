@@ -43,9 +43,14 @@ body{
   @apply  bg-[rgb(var(--primary-color))] border-[rgb(var(--primary-color))] scale-110;
 }
 
-.main{
+/* .main{
   @apply w-full   mt-[120px] flex flex-col justify-start items-center gap-8 py-8
+} */
+.main {
+  @apply w-full mt-[120px] flex flex-col justify-start items-center gap-8 py-8 overflow-y-auto relative ;
+  height: calc(100vh - 120px); /* ارتفاع مشخص برای فعال شدن اسکرول */
 }
+
 .cat__continer{
   @apply w-[90%]  sm:max-w-[800px] bg-[var(--secend-back-color)] flex flex-col justify-center items-center gap-5 py-8 cursor-default shadow-2xl
 }
@@ -89,4 +94,11 @@ body{
 .cat__item--about{
   font-family: var(--primary-font);
   @apply flex justify-end items-center pr-4 text-gray-400 text-[1rem]
+}
+
+.loader-continer{
+  @apply w-full h-[100vh] absolute top-0 bg-[#444] z-50 flex justify-center items-center 
+}
+.loader-continer.hidden{
+  @apply hidden
 }

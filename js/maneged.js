@@ -10,6 +10,12 @@ const url = "https://pazirik-22ee5-default-rtdb.firebaseio.com";
 let category = [];
 let items = [];
 
+
+const formatNumber = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+};
+
+
 // ------------------ آپدیت آیتم در دیتابیس ------------------
 // این فانکشن یک آیتم موجود را بر اساس id با داده‌های جدید جایگزین می‌کند
 const putNewItem = async (name, price, about = "", cat, id) => {
@@ -426,11 +432,11 @@ const insertItemInDom = (items) => {
 
     itemsContiner.insertAdjacentHTML(
       "beforeend",
-      `<div id="${id}" class="item-cart">
+      `<div id="${id}" dir="ltr" class="item-cart">
           <div class="item-cart__name-price">
             <div class="item-cart__price">
               <p>تومان</p>
-              <b>${priceItem.toLocaleString()}</b>
+              <b>${formatNumber(priceItem)}</b>
             </div>
             <div class="item-cart__name">${nameItem}</div>
           </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    npx @tailwindcss/cli -i ./css/maneged/input.css -o ./css/maneged/output.css --watch    
+    <!-- npx @tailwindcss/cli -i ./css/maneged/input.css -o ./css/maneged/output.css --watch     -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>کافه رستوران پازیریک</title>
@@ -15,71 +15,14 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
-  /////////////////// افزودن ایتم جدید
-  <!-- <div class="modal-main__title">افزودن ایتم جدید</div>
-          <input type="text" dir="rtl" placeholder="نام ایتم جدید ..." class="modal-main__input" />
-          <input type="text" dir="rtl" placeholder="قیمت ایتم جدید ..." class="modal-main__input"/>
-          <textarea name="" dir="rtl" placeholder="توضیحات ایتم جدید ..." class="modal-main__textarea"></textarea>
-          <select dir="rtl" class="modal-main__select" name="category">
-            <option value="main">غذاهای اصلی</option>
-            <option value="dessert">دسر</option>
-            <option value="drink">نوشیدنی</option>
-          </select>
-          <div class="modal-footer">
-          <div id="add-new-item" class="modal-footer__ok-btn">تایید</div>
-          <div id="add-new-item" class="modal-footer__cancel-btn">انصراف</div>
-        </div>
-         -->
-
-  <!-- ///////////////// عوض کردن مقدار ایتم ها -->
-
-  <!-- <div class="modal-main__title">تغیر جدید ایتم </div>
-          <input
-            type="text"
-            dir="rtl"
-            placeholder="نام جدید ..."
-            class="modal-main__input"
-          />
-          <input
-            type="text"
-            dir="rtl"
-            placeholder="قیمت جدید ..."
-            class="modal-main__input"
-          />
-          <textarea
-            name=""
-            dir="rtl"
-            placeholder="توضیحات جدید ..."
-            class="modal-main__textarea"
-          ></textarea>
-          <select dir="rtl" class="modal-main__select" name="category">
-            <option value="main">غذاهای اصلی</option>
-            <option value="dessert">دسر</option>
-            <option value="drink">نوشیدنی</option>
-          </select>
-          <div class="modal-footer">
-          <div id="update-item" class="modal-footer__ok-btn">تایید</div>
-          <div id="update-item" class="modal-footer__cancel-btn">انصراف</div>
-        </div>
-         -->
-
-  <!-- ///////////////////////////// پیام حذف ایتم -->
-
-  <!-- <div dir="rtl" class="modal-main__warning-massage">
-           <div class="warning-icon">
-             <i class="fas fa-warning"></i>
-           </div>
-           <p>ایا از حذف این ایتم اطمینان دارید ؟</p>
-         </div> -->
-
-  <body >
+  <body>
     <div class="loader-continer">
       <span class="loader"></span>
     </div>
     <div class="back-blur hidden">
       <div class="Modal">
         <div class="modal-header">
-          <div  class="modal-header__close-btn">
+          <div class="modal-header__close-btn">
             <i class="fas fa-close"></i>
           </div>
         </div>
@@ -104,40 +47,48 @@
       </div>
       <h1>پنل ادمین پازیریک</h1>
     </div>
+
     <div class="main">
       <div class="continer">
         <div id="creat-item-btn" class="creat-item__btn">افزودن ایتم جدید</div>
-        <div class="sort__section">
-          <h1>: دسته بندی ها</h1>
-          <select dir="rtl" id="sort-select" class="sort__select" name="category">
-            <option value="main">غذاهای اصلی</option>
-            <option value="dessert">دسر</option>
-            <option value="drink">نوشیدنی</option>
-          </select>
-        </div>
-        <div  class="items-continer">
-          <div class="item-cart">
-            <div class="item-cart__name-price">
-              <div class="item-cart__price">
-                <p>تومان</p>
-                <b>680.000</b>
+        <div dir="rtl" class="sort-continer-item">
+          <div dir="ltr" class="sort__section">
+            <h1>: دسته بندی ها</h1>
+            <select
+              dir="rtl"
+              id="sort-select"
+              class="sort__select"
+              name="category"
+            >
+              <option value="main">غذاهای اصلی</option>
+              <option value="dessert">دسر</option>
+              <option value="drink">نوشیدنی</option>
+            </select>
+          </div>
+          <div class="items-continer">
+            <div dir="ltr" class="item-cart">
+              <div class="item-cart__name-price">
+                <div class="item-cart__price">
+                  <p>تومان</p>
+                  <b>680.000</b>
+                </div>
+                <div class="item-cart__name">پیتزا سوپریم</div>
               </div>
-              <div class="item-cart__name">پیتزا سوپریم</div>
-            </div>
-            <div class="item-cart__about">
-              180 گرم کوبیده,200 گرم برنج ایرانی ,یک عدد گوجه کبابی , یک عدد
-              فلفل کبابی
-            </div>
-            <div class="item-cart__cat">
-              <h1>پیتزا</h1>
-              <p>: دسته بندی</p>
-            </div>
-            <div class="item-cart__btn-section">
-              <div class="item-cart__update-btn">
-                <i class="fas fa-pen"></i>
+              <div class="item-cart__about">
+                180 گرم کوبیده,200 گرم برنج ایرانی ,یک عدد گوجه کبابی , یک عدد
+                فلفل کبابی
               </div>
-              <div class="item-cart__remove-btn">
-                <i class="fas fa-trash"></i>
+              <div class="item-cart__cat">
+                <h1>پیتزا</h1>
+                <p>: دسته بندی</p>
+              </div>
+              <div class="item-cart__btn-section">
+                <div class="item-cart__update-btn">
+                  <i class="fas fa-pen"></i>
+                </div>
+                <div class="item-cart__remove-btn">
+                  <i class="fas fa-trash"></i>
+                </div>
               </div>
             </div>
           </div>
