@@ -5,7 +5,7 @@ A fully responsive restaurant menu website with advanced admin panel for dynamic
 ![Pazirik Restaurant Menu](./image/img/DEMO.PNG)
 
 ## 🌟 Live Demo
-**Website URL:** [https://rogitxtdff.github.io/Pazirik-menu/](https://rogitxtdff.github.io/Pazirik-menu/)  
+**Website URL:** [https://rogitxtdff.github.io/Pazirik-menu](https://rogitxtdff.github.io/Pazirik-menu)  
 **Login Panel:** [https://rogitxtdff.github.io/Pazirik-menu/login.html](https://rogitxtdff.github.io/Pazirik-menu/login.html)
 
 ---
