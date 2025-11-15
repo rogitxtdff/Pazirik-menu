@@ -138,7 +138,7 @@ const getCategoryItem = async () => {
     
   } catch (error) {
     console.error("Error in getCategoryItem:", error);
-    callToast(false, "ناموفق در لود صفحه لطفا رفرش کنید.");
+    callToast(false, "ناموفق در لود صفحه لطفا VPN خود را وصل کنید.");
   }
 };
 
