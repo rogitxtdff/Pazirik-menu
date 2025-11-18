@@ -45,8 +45,8 @@ A fully responsive restaurant menu website with advanced admin panel for dynamic
 
 
 ### Login Information:
-- **Email:** `admin@pazirik.com`
-- **Password:** `PazirikAdmin2025`
+- **Email:** `admin`
+- **Password:** `admin`
 
 *🔒 Note: These credentials are for demo purposes. Change them in production.*
 
